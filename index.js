@@ -18,11 +18,11 @@ if (meth == "GET" && ress.startsWith("products/")) {
 }
 
 // POST NEW PRODUCT
-if (meth == "POST") {
-  const title = argv[4]
-  const price = argv[5]
-  const category = argv[6]
+const title = argv[4]
+const price = argv[5]
+const category = argv[6]
 
+if (meth == "POST") {
   const product = { title: title, price: price, category: category };
   try {
     const response = await fetch('https://fakestoreapi.com/products', {
